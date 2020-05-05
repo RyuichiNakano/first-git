@@ -1,0 +1,15 @@
+$keyColor: red;
+
+h1 {
+    color: $keyColor;
+}
+
+body {
+    h1 {
+        color: black;
+    }
+    
+    p{
+        color: grays;
+    }
+}

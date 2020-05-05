@@ -1,0 +1,734 @@
+@charset "utf-8";
+
+html {
+
+font-size: 62.5%;
+
+}
+
+@mixin fontsize($size: 24) {
+
+font-size: $size + px;
+
+font-size: ($size / 10) * 1rem;
+
+}
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$blue1 : #42b9d0;
+$blue2 : #339fd1;
+$gray_blue : #eaf2f4;
+
+
+// ここからheader
+
+header{
+
+  background: $gray_blue;
+  
+  #header_in{
+    padding-top: 10px;
+    padding-bottom:4px;
+    
+  }
+
+  @media (max-width: 549px) {
+    .logo{
+      width: 190px;
+    }
+
+    .navi{
+      width:40px;
+      float: right;
+    }
+  }
+//headerメディアクエリ---------------
+@media (min-width: 550px){
+  #header_in.container{
+    width: 80%;
+  }
+}
+
+
+
+//スマホ表示のナビゲーションのスタイルシート---------------------------
+  .sp_navi_li{
+    width: 180px;
+    position: absolute;
+    top:50px;
+    right:2%;
+    border: 1px solid #eee;
+    background: white;
+    margin: 0;
+    padding:0;
+    display: none;
+    z-index: 100;
+
+    li{
+
+      list-style: none;
+      margin: 0;
+      padding:0;
+
+      a{
+        display: block;
+        padding: 10px 8px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        text-decoration: none;
+      }
+    }
+  }
+ 
+ 
+  // PCビュー---------------------------------------------------------
+ @media (min-width: 550px) {
+
+    .clearfix::after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+
+    .sp_navi{
+      display: none;
+    }
+
+    #header_in{
+      padding: 15px 0 10px 0;
+    }
+
+    .pc_navi_li{
+      margin:0;
+      padding:0;
+
+      li{
+        list-style:none;
+        margin: 5px 0 0 0;
+        padding: 0;
+        float: left;
+
+        a{
+          color: #626262;
+          text-decoration: none;
+          font-weight: bold;
+          @include fontsize(14);
+          padding-right: 10px;
+        }//←なぜここにタグ？なぞ---------------------
+
+        a:hover{
+          color: $blue1;
+        }
+      }// li
+
+//各クラスに対してそれぞれのクラス、画像の読み込み-------------
+      li.navi_toppage a{
+
+        background-repeat:no-repeat;
+        display: inline-block;
+        line-height: 40px;
+        padding-left: 50px;
+
+        background-image: url("../images/top/navi_top.png");
+        background-size: 40px 40px;
+
+      }// .li.navi_toppage a
+
+      li.navi_news a{
+
+        background-repeat:no-repeat;
+        display: inline-block;
+        line-height: 40px;
+        padding-left: 50px;
+
+        background-image: url("../images/top/navi_news.png");
+        background-size: 40px 40px;
+
+      }// .li.navi_news a
+
+      li.navi_company a{
+
+        background-repeat:no-repeat;
+        display: inline-block;
+        line-height: 40px;
+        padding-left: 50px;
+
+        background-image: url("../images/top/navi_company.png");
+        background-size: 40px 40px;
+
+      }// .li.navi_company a
+
+    }// .pc_navi_li
+
+  }// min-width: 550px
+  
+  
+  //phoneビュー--------------------------------
+  @media (max-width: 549px) {
+    .pc_navi{
+      display: none;
+    }
+  }// max-width: 549px
+}// header
+
+// カバーエリア作成---------------------------------------
+#cover_area{
+
+  text-align: center;
+  padding:80px 0;
+
+  background-image: url("../images/top/cover.jpg");
+  background-size: cover;
+
+//cover_area PCビュー------------------------------------------
+  @media (min-width: 550px) {
+
+    text-align: left;
+    height:420px;
+    padding:0;
+
+    img{
+      margin-top: 180px;
+      margin-left: 70px;
+    }
+  }
+  // min-width: 550px
+}
+
+//service_area--------------------------------------------------
+#service_area{
+  padding-top: 20px;
+
+  @media (min-width: 550px) {
+    padding-top: 30px;
+  }
+  // min-width: 550px
+
+#service_area h3{//ここいがいのh3
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+  .columns{
+
+    color: #626262;
+
+    .service_title{
+      @include fontsize(18);
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    p{
+
+      @include fontsize(15);
+      margin-top: 10px;
+    }
+
+    @media (min-width: 550px) {
+
+      .service_title{
+        @include fontsize(16);
+      }
+
+      p{
+
+        @include fontsize(13);
+      }
+
+    }
+    // min-width: 550px
+
+  }
+  // .columns
+
+}
+// #service_area
+
+#news_area{
+
+  background-color:$gray_blue;
+
+  @media (min-width: 550px) {
+
+    .container{
+
+      padding:0px 10% 50px 10%;
+
+    }
+
+  }
+  // min-width: 550px
+
+  .news_title{
+
+    text-align: center;
+    @include fontsize(26);
+    color: $blue1;
+    padding: 15px 0 10px 0;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+  }
+
+  .news_lists{
+
+    li{
+      list-style: none;
+      @include fontsize(15);
+
+      span{
+        color: $blue1;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 3px;
+      }
+    }
+    // li
+  }
+  // .news_lists
+
+  @media (min-width: 550px) {
+
+    .news_title{
+      @include fontsize(22);
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 50px 0 41px 0;
+      
+      
+    }}
+
+      @media (min-width: 550px) {
+    .news_lists{
+
+      li{
+        @include fontsize(14);
+        margin-bottom: 20px;
+
+        span{
+          display: inline-block;
+          margin-bottom: 0px;
+          font-weight: bold;
+        }
+      }
+      // li
+    }
+    // .news_lists
+
+  }
+  // min-width: 550px
+
+
+}
+// #news_area
+
+
+
+//sub_cover (companysite)---------------------------------------
+#sub_cover {
+  padding: 40px 0;
+  background-image: url("../images/companyimages/sub_cover.jpg");
+  background-size: cover;
+
+  .container{
+    width: 100%;
+    padding: 0;
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+}
+
+  .twelve{
+    width: 100%;
+    margin-left: 0;
+    
+   h2 {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 0.2rem;
+    }
+   }
+// 確認OK 20200212
+
+//sub_cover(media)--------------------------------------------
+@media (min-width: 550px){
+#sub_cover {
+    padding: 80px 0;
+
+  .container{
+    width: 80%;
+  }
+ }
+}
+@media (min-width: 400px){
+.container {
+    width: 85%;
+    padding: 0;
+}
+  
+}
+@media (min-width: 550px){
+  .twelve{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+  
+    h2{
+      text-align: center;
+      color: white;
+      font-size:32px;
+      font-size: 3.2rem;
+      font-weight: bold;
+      margin: 0;
+      letter-spacing: 0.2rem;
+    }
+   }
+}
+//sub_cover end-----------------------------------
+
+// news erea contents----------------------------------------
+
+#contents{
+padding-top: 20px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+.columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+#contents #main h2 {
+    color: #42b9d0;
+    border-bottom: 3px solid #42b9d0;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 15px;
+    
+#contents #main .news_li {
+    font-size: 15px;
+    font-size: 1.5rem;
+}
+
+#contents #main .news_li li {
+    list-style: none;
+}
+
+#contents #main .news_li li span {
+    color: #42b9d0;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px;
+ }
+}
+
+// news erea contents(end)----------------------------------------
+// company info--------------------------------------------
+#contents #main h2.company_title {
+    margin-bottom: 0px;
+}
+
+
+
+#contents #main th{
+    padding: 20px 0;
+    color: #626262;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+#contents #main th{
+  padding-right: 20px;
+}
+
+
+#contents #main td {
+    padding: 20px 0;
+    color: #626262;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+
+//contents(media)----------------------------------------
+
+@media(min-width: 550px){
+#contents{
+    padding-top: 35px;
+    padding-bottom: 70px;
+    }
+    .container{
+     width: 80%;
+    }
+}
+
+@media (min-width: 400px){
+.container {
+    width: 85%;
+    padding: 0;
+    }
+}
+
+@media(min-width: 550px){
+#contents #main{
+    padding-right: 20px;
+    } 
+
+.nine .columns{
+   width: 74%;
+    }
+
+#contents #main h2 {
+    font-size: 20px;
+    font-size: 2rem;
+    padding-bottom: 20px;
+    }
+
+#contents #main .news_li li span {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-right: 10px;
+ }  
+}
+  
+      
+
+// sidebar------------------------------------------
+@media (max-width: 549px){
+  .pc_sidemenu {
+    display: none;
+}
+}
+
+.pc_sidemenu li {
+    list-style: none;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    margin-bottom: 0px;
+    padding: 10px 10px 10px 20px;
+    background-image: url(../images/companyimages/side_arrow.png);
+    background-size: 4px 8px;
+
+}
+#sidebar{
+  padding-bottom: 20px;
+  
+  .columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+  }
+  
+}
+    
+#sidebar h3 {
+    color: #42b9d0;
+    font-size: 14px;
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    background-color: #f3f9fb;
+    padding: 15px;
+    margin-bottom: 0px;
+  
+      
+}
+
+    ul {
+    display: block;
+    list-style-type: disc;
+    list-style: circle inside;
+}
+
+
+
+
+
+// news erea---------------------------------------------------------
+.news_title1{
+      margin-bottom: 0;
+      font-size: 2rem;
+      padding-bottom: 20px;
+      color: $blue1;
+      border-bottom: 3px solid $blue1;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 2rem;
+}
+.news_li{
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    list-style: none;
+}
+
+.news_li span {
+    display: block;
+    font-weight: bold;
+    color: $blue1;
+    margin-bottom: 3px;
+}
+
+.fb_iframe_widget {
+    display: inline-blocsk;
+    position: relative;
+}
+
+li a{
+  text-decoration: none;
+}
+
+//media news------
+@media (min-width: 550px){
+#contents #main .news_li li {
+    list-style: none;
+    padding-bottom: 5px;
+}
+}
+
+
+footer{
+
+  background-color:$blue1;
+  color: #fff;
+  padding-top: 20px;
+
+  @media (max-width: 549px) {
+
+    .container{
+
+      padding: 0;
+    }
+
+    .sp{
+
+      padding: 0 6%;
+      margin: 0 auto;
+
+    }
+
+    .foot_navi{
+
+      margin-top: 20px;
+
+      li{
+        list-style: none;
+        margin-bottom: 1px;
+
+        a{
+          color:$blue1;
+          background-color:$gray_blue;
+          display: block;
+          text-align: center;
+          font-weight: bold;
+          text-decoration: none;
+          @include fontsize(16);
+          padding: 16px 0;
+        }
+      }
+    }
+    // .foot_navi
+
+  }
+  // max-width: 549px
+
+
+
+  .foot_address{
+
+    @include fontsize(16);
+    padding-top: 10px;
+  }
+
+  .copy{
+
+    text-align: center;
+    @include fontsize(11);
+    color: #b2e1ea;
+  }
+
+
+
+  @media (min-width: 550px) {
+
+    padding-top: 30px;
+
+    .foot_address{
+      padding: 0px;
+      @include fontsize(12);
+    }
+
+    .foot_navi{
+
+      float: right;
+
+      li{
+        list-style: none;
+
+        background-repeat: no-repeat;
+        background-position: left center;
+
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+        @include fontsize(11);
+
+        background-image: url("../images/top/foot_arroehead.png");
+        background-size: 4px 6px;
+        
+      }
+      // li
+
+      a{
+
+        color: white;
+        padding-left: 10px;
+        text-decoration: none;
+
+      }
+
+      a:hover{
+
+        color:$gray_blue;
+      }
+
+    }
+    // .foot_navi
+
+    .copy{
+
+      margin-top: 30px;
+    }
+
+  }
+  // min-width: 550px
+
+
+}
+// footer
+
+h1{
+  margin: 0;
+  padding: 0;
+}

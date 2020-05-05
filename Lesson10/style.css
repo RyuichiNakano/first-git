@@ -1,0 +1,265 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #fdfcf6; }
+
+a {
+  color: #14c0c9;
+  text-decoration: none; }
+  a:visited {
+    color: #0f949b; }
+  a:hover {
+    color: #0f949b; }
+  a:active {
+    color: #16d6e0; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center, section .container, #skills i {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Font
+------------------------------------------------------------*/
+.abel, section h2, #skills h3, #works .works-box a .works-box-inner .button-readmore {
+  font-family: 'Abel', sans-serif; }
+
+.uppercase, section h2, #skills h3, #works .works-box a .works-box-inner .button-readmore {
+  text-transform: uppercase; }
+
+/* Header
+------------------------------------------------------------*/
+.button-contact {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border: 2px solid #4c4c4c;
+  color: #4c4c4c;
+  text-align: center;
+  display: block;
+  float: right;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 0;
+  margin: 20px 20px 0 0; }
+  .button-contact:visited {
+    color: #4c4c4c; }
+
+header .profile {
+  width: 60%;
+  margin: 0 auto;
+  padding: 60px 0;
+  clear: both; }
+header .site-title {
+  font-size: 1.8rem;
+  line-height: normal; }
+  header .site-title span {
+    display: block;
+    font-size: 4.2rem;
+    color: #14c0c9; }
+header .profile-icon {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 30px auto; }
+header p {
+  font-size: 1.6rem; }
+
+/* Contents
+------------------------------------------------------------*/
+section {
+  padding: 60px 0; }
+  section .container {
+    width: 90%; }
+  section h2 {
+    font-size: 3.2rem; }
+
+#skills {
+  background-color: #bea300; }
+  #skills .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  #skills h2 {
+    color: #fdfcf6;
+    margin-bottom: 60px; }
+  #skills .skill-box {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #fdfcf6;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  #skills i {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    background-color: #14c0c9;
+    font-size: 4.5rem;
+    color: #FFF;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+  #skills h3 {
+    color: #14c0c9;
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    font-weight: bold; }
+
+#works {
+  padding-bottom: 0; }
+  #works h2 {
+    margin-bottom: 50px; }
+  #works .works-box {
+    width: 100%;
+    float: left;
+    height: 100%; }
+    #works .works-box a {
+      display: block;
+      position: relative; }
+      #works .works-box a .works-box-inner {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        color: #FFF; }
+        #works .works-box a .works-box-inner div {
+          position: absolute;
+          margin: auto;
+          height: 40%;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 10px 20px; }
+        #works .works-box a .works-box-inner h3 {
+          font-size: 1.6rem;
+          margin: 0 0 5px;
+          font-weight: bold; }
+        #works .works-box a .works-box-inner small {
+          font-size: 1rem;
+          display: block;
+          margin-bottom: 15px; }
+        #works .works-box a .works-box-inner .button-readmore {
+          margin: auto;
+          text-align: center;
+          padding: 5px 0;
+          width: 180px;
+          display: block;
+          color: #FFF;
+          font-weight: bold;
+          background-color: #14c0c9;
+          -moz-border-radius: 4px;
+          -webkit-border-radius: 4px;
+          border-radius: 4px;
+          font-size: 1rem; }
+    #works .works-box img {
+      max-width: 100%;
+      display: block; }
+  #works::after {
+    content: '';
+    display: block;
+    clear: both; }
+
+#contact ul {
+  text-align: center;
+  margin-top: 60px; }
+  #contact ul li {
+    display: inline-block;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-right: 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top; }
+    #contact ul li:last-child {
+      margin-right: 0; }
+  #contact ul .github, #contact ul .skype {
+    font-size: 3.2rem; }
+  #contact ul .github i {
+    margin-left: 2px; }
+  #contact ul a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #FFF;
+    background-color: #14c0c9;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: #bea300;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF; }
+
+@media (min-width: 1025px) {
+  /* Base
+  ------------------------------------------------------------*/
+  a:hover {
+    text-decoration: underline; }
+
+  /* Header
+  ------------------------------------------------------------*/
+  .button-contact:hover, .button-contact:active {
+    background-color: #4c4c4c;
+    color: #FFF; }
+
+  #skills .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #skills .skill-box {
+    margin: 0 10px; }
+
+  #works .works-box {
+    width: 33.33333%; }
+    #works .works-box a .works-box-inner {
+      display: none;
+      width: 0%; }
+      #works .works-box a .works-box-inner .button-readmore:hover {
+        background-color: #0f949b; }
+    #works .works-box a:hover .works-box-inner {
+      display: block;
+      width: 100%; }
+
+  #contact ul a:hover {
+    background-color: #0f949b; } }
+
+/*# sourceMappingURL=style.css.map */

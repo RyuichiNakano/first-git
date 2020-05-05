@@ -1,0 +1,44 @@
+/*
+Error: Invalid CSS after "  padding-top:20px": expected "{", was ";"
+        on line 280 of sample.scss
+
+275:   // .columns
+276: 
+277: }
+278: // #service_areaservice_area{
+279: 
+280:   padding-top:20px;
+281: 
+282:   @media (min-width: 550px) {
+283:     padding-top: 30px;
+284:   }
+285:   
+
+Backtrace:
+sample.scss:280
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:1137:in `expected'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:1132:in `tok!'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:665:in `block'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:658:in `ruleset'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:391:in `run'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/exec/base.rb:52:in `parse'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/lib/sass/exec/base.rb:19:in `parse!'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/sass-3.4.25/bin/sass:13:in `<top (required)>'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/bin/sass:23:in `load'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/bin/sass:23:in `<main>'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/home/ec2-user/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  padding-top:20px\": expected \"{\", was \";\"\A         on line 280 of sample.scss\A \A 275:   // .columns\A 276: \A 277: }\A 278: // #service_areaservice_area{\A 279: \A 280:   padding-top:20px;\A 281: \A 282:   @media (min-width: 550px) {\A 283:     padding-top: 30px;\A 284:   }\A 285:   "; }
